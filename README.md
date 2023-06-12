@@ -11,3 +11,5 @@ ERRORS___ -ERROR- The process of building this was pretty hard to understand. -R
 
 -ERROR- Tried storing the data in the local storage -RESOLUTION- N/A
 
+https://master.d2vc4am2d3b2z0.amplifyapp.com/ 
+my deployment
