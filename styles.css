@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 1200px;  
+}
+
+body{
+    display: flex; /*makes the header n main continers go left to right*/
+    flex-direction: column; /*lets the flex go up & down*/
+    min-height: 100vh;
+    background: grey;
+    color: aqua;
+}
+
+header{
+    padding: 2em 1em; 
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 { /*changes the h1 line*/
+    font-size: 2.5em;
+    font-weight: 500;
+    padding-bottom: 5px; 
+    margin-bottom: 1em;
+}
+
+.taskForm{ /*gives the input n button a flex*/
+    display: flex;
+}
+
+input, button{ /*these lines of code makes the input styling none*/
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.taskForm input{
+    /*flex: 1 1 0%; /*gives space*/
+    width: 80%;  
+    background-color: gainsboro;
+    padding: 1em;/*give size to the input*/
+    border-radius: 1em; /*gives the border roundness*/
+    margin-right: 1em; /*on the right side of the input, it decreases*/
+    color: black;
+    font-size: 1em;
+    display: inline-block;
+}
+
+.taskForm input::placeholder{
+    color: black;
+}
+
+.taskForm button{
+    display: inline-block;
+    padding: 15px;
+    border: 1px;
+    font-weight: 700;
+    transition: 0.7s; 
+    border-radius: 1em; /* changes the corners of button */
+    box-shadow: 0 0 14px -5px cyan;/* creates a shadow around the button */
+    background-image: linear-gradient(45deg, cyan 0%, white 51%, cyan 100%);
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.taskForm button:hover{  
+    background-position: right center;
+    text-decoration: none;
+    box-shadow: 0 0 16px -6px;
+    transition: 0.7s;
+    padding: 20px;
+}
+
+.taskform button:active{  
+    transform: scale(.95);
+}
+
+main{
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list{ /*adds space around the tasks*/
+    padding: 1em;
+}
+
+.task-list h2{/*make the font for the header "Tasks" fancy*/
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.tasks .task{ /*gives space between the text inside the tasks*/
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgrey;
+    padding: 1em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+
+}
+
+.content{/*expands the tasks text*/
+    flex: 1 1 0%;
+}
+
+.tasks .task .content .text{
+    font-size: 1em;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+.task .actions button{ /*changes the edit and delete buttons for tasks*/
+    cursor: pointer;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.5s;
+    padding: 1em;
+    border-radius: 1em;
+
+}
+
+.task .actions button:hover{ /*adds a hover effect for the buttons*/
+    opacity: 0.8;
+}
+
+.task .actions button:active{ /*when active, button changes*/
+    opacity: 0.6;
+}
+
+.edit{
+    box-shadow: 0 0 14px -5px cyan;/* creates a shadow around the button */
+    background-image: linear-gradient(135deg, cyan 0%, white 51%, cyan 100%);
+    color: green;
+}
+.delete{
+    box-shadow: 0 0 14px -5px cyan;/* creates a shadow around the button */
+    background-image: linear-gradient(135deg, cyan 0%, white 51%, cyan 100%);
+    color: red;
+}
